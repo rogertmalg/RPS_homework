@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class = "result">
+    <h1>Thanks for playing!</h1>
+
+    <h2>Player 1 : {{player_1.hand}} VS Player 2 : {{player_2.hand}}</h2>
+    
+    {% if winner == None %}
+    
+    <H2>It's a Draw</H2>
+    
+    {% else %}
+    
+    <h2>Winner is: {{winner.name}}</h2>
+    
+    {% endif %}
+</div>
+
+{% endblock %}
