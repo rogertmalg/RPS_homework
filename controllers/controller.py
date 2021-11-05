@@ -5,7 +5,7 @@ from models.player import *
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('home.html')
 
 @app.route('/<player_1_hand>/<player_2_hand>')
 def result(player_1_hand, player_2_hand):
