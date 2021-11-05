@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Face the AI!</h1>
+
+<div class = "play">
+    <h2>Make your choice</h2>
+
+    <form action="/events" method="post">
+        <label for="name">Player name</label>
+        <input type="text" name="name" id="name">
+        <br>
+    
+        <label for="hand">Player hand</label>
+        <select name="hand" id="hand">
+            <option value="rock">rock</option>
+            <option value="paper">paper</option>
+            <option value="scissors">scissors</option>
+        </select>
+        <br>
+    
+        <input type="submit" value="play">
+    
+      </form>
+</div>
+
+{% endblock %}

@@ -1,7 +1,8 @@
-from flask import render_template #might need request, redirect
+from flask import render_template, request, redirect 
 from app import app
 from models.game import *
 from models.player import *
+import random
 
 @app.route('/')
 def home():
@@ -15,3 +16,12 @@ def result(player_1_hand, player_2_hand):
     result = game_object.play_game(player_1, player_2)
     
     return render_template('result.html', player_1 = player_1, player_2 = player_2, winner = result)
+
+@app.route('/play')
+def play():
+    return render_template('play.html')
+    
+
+    # player_name = request.form['name']
+    # player_hand = request.form['hand']
+    # player_1 = Player(player_name, player_hand)

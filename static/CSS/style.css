@@ -26,6 +26,7 @@ nav {
     display: flex;
     /* align-self: center; */
     text-align: center;
+    font-size: 20px;
     
 }
 
@@ -73,3 +74,15 @@ h1 {
     border-radius: 20px;
     text-align: center;
     font-size: 20px;
+}
+
+.play {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #496a81;
+    margin: 100px 200px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+}  
