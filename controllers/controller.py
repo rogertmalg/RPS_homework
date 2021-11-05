@@ -20,8 +20,20 @@ def result(player_1_hand, player_2_hand):
 @app.route('/play')
 def play():
     return render_template('play.html')
-    
 
-    # player_name = request.form['name']
-    # player_hand = request.form['hand']
-    # player_1 = Player(player_name, player_hand)
+@app.route('/result', methods=['POST'])
+def play_result():
+    hand_list = ["rock", "paper", "scissors"]
+    computer = Player("Computer", random.choice(hand_list))
+    player_name = request.form['name']
+    player_hand = request.form['hand']
+    player = Player(player_name, player_hand)
+    game_object = Game()
+    result = game_object.comp_play(player, computer)
+
+    print(player.hand)
+    print(computer.hand)
+
+    return render_template('result.html', player_1 = player, player_2 = computer, winner=result)
+
+# remove small bit of logic from controller to models. 

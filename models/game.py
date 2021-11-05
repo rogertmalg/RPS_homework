@@ -18,7 +18,20 @@ class Game():
 
         return winner
 
-    # did check homework file for this part, logic behind this is that if 
+    # did check homework file for the method above, logic behind this is that if 
     # player_1 chose rock, the winner_check will check the value of the 
     # rock key in the dictionary, and if that is equals to player_2 hand
-    # it means player_1 wins, and vice-versa. 
+    # it means player_1 wins, and vice-versa. Followed the same logic for the
+    # method bellow.
+
+    def comp_play(self, player, computer):
+        
+        winner = None
+
+        if self.winner_check[player.hand] == computer.hand:
+            winner = player
+        
+        elif self.winner_check[computer.hand] == player.hand:
+            winner = computer
+        
+        return winner
